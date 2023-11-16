@@ -15,6 +15,16 @@ namespace KMHangMan
 
         static void Main(string[] args)
         {
+            Graphics.Logo(((Console.WindowWidth)-57)/2,2);
+            Graphics.Frames();
+            string description1 = "HangMan is a game in which one player tries to guess ";
+            string description2 = "the letters of a word. In this game you have to guess";
+            string description3 = "the word of a special car. If you fail to find the"; 
+            string description4 = "right letter five times, you hang.";
+            Graphics.Pos(((Console.WindowWidth) - description1.Length) / 2,11, description1);
+            Graphics.Pos(((Console.WindowWidth) - description1.Length) / 2, 12, description2);
+            Graphics.Pos(((Console.WindowWidth) - description1.Length) / 2, 13, description3);
+            Graphics.Pos(((Console.WindowWidth) - description1.Length) / 2, 14, description4);
             StartHangman();
         }
         public static void StartHangman()
@@ -26,13 +36,15 @@ namespace KMHangMan
             //create a varible containing the secret word
             string secretWordPicked = secretWords[number];
             //write the secret word
-            Console.WriteLine(secretWordPicked);
+            Console.WriteLine();
             //find the length of the secret word picked
             int GetLineLength = secretWordPicked.Length;
             //create a variable with - in the length of the secret word
             string userWord = new string('-', GetLineLength);
             //write the secret word
-            Console.WriteLine(userWord);
+            string theWordInLines = "This is the word obscured: \n\n";
+            Graphics.Pos(((Console.WindowWidth) - userWord.Length) / 2, 18, userWord);
+            Graphics.Pos(((Console.WindowWidth) - theWordInLines.Length) / 2, 16, theWordInLines);
             ConvertWordToArray(secretWordPicked, userWord);
         }
 
@@ -48,10 +60,9 @@ namespace KMHangMan
         //char[] userWordChar = secretWordPicked.ToCharArray();
         public static void getUserInput(char[] wordInChar, char[] userWordInChar)
         {
-            Console.WriteLine();
-            Console.Write("Write a letter: ");
+            string userMessage = "Write a letter: ";
+            Graphics.Pos(((Console.WindowWidth) - userMessage.Length) / 2, 20, userMessage);
             char userInputKey = Console.ReadKey().KeyChar;
-            Console.WriteLine();
             checkWord(wordInChar, userWordInChar, userInputKey);
         }
 
@@ -72,9 +83,14 @@ namespace KMHangMan
 
                 if (!letterFound)
                 {
-                    Console.WriteLine($"{userInputKey} is not in the word.");
+                    string letterNotThere = $"{userInputKey} is not in the word.";
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Graphics.Pos(((Console.WindowWidth) - letterNotThere.Length) / 2, 22, letterNotThere);
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     guessWrongNumber++;
+
                 }
+                Console.SetCursorPosition(((Console.WindowWidth) - userWordInChar.Length) / 2, 18);
                 foreach (char s in userWordInChar)
                 {
                     Console.Write(s);
@@ -109,13 +125,23 @@ namespace KMHangMan
         }
         public static void UserWon()
         {
-            Console.WriteLine("\nYou won");
+            Console.ForegroundColor = ConsoleColor.Green;
+            string youWon = "You Won and will stay alive!";
+            Graphics.Pos(((Console.WindowWidth) - youWon.Length) / 2, 22, youWon);
+            Console.ResetColor();
+            Console.SetCursorPosition(0, 25);
+            Console.ReadKey();
         }
 
         public static void Fail(char[] wordInChar)
         {
             string secretWordRevealed = new string(wordInChar);
-            Console.WriteLine($"You failed guessing the word. The word was: {secretWordRevealed}");
+            Console.ForegroundColor = ConsoleColor.Red;
+            string youLost = $"You failed guessing the word. The word was: {secretWordRevealed}";
+            Graphics.Pos(((Console.WindowWidth) - youLost.Length) / 2, 22, youLost);
+            Console.ResetColor();
+            Console.SetCursorPosition(0, 25);
+            Console.ReadKey();
 
         }
     }
