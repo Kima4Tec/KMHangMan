@@ -8,30 +8,34 @@ namespace KMHangMan
 {
     internal class Graphics
     {
-        public static void Logo(int x, int y, ConsoleColor color = ConsoleColor.Yellow)
+        public static void Logo(int x, int y)
         {
-            Console.ForegroundColor = color;
-            Pos(x, y + 0, @"       _    _                   __  __                   ");
-            Pos(x, y + 1, @"      | |  | |                 |  \/  |                  ");
-            Pos(x, y + 2, @"      | |__| | __ _ _ __   __ _| \  / | __ _ _ __        ");
-            Pos(x, y + 3, @"      |  __  |/ _` | '_ \ / _` | |\/| |/ _` | '_ \       ");
-            Pos(x, y + 4, @"      | |  | | (_| | | | | (_| | |  | | (_| | | | |      ");
-            Pos(x, y + 5, @"      |_|  |_|\__,_|_| |_|\__, |_|  |_|\__,_|_| |_|      ");
-            Pos(x, y + 6, @"                           __/ |                         ");
-            Pos(x, y + 7, @"                           |___/                         ");
+            LogoPos(x, y + 0, @"       _    _                   __  __                   ");
+            LogoPos(x, y + 1, @"      | |  | |                 |  \/  |                  ");
+            LogoPos(x, y + 2, @"      | |__| | __ _ _ __   __ _| \  / | __ _ _ __        ");
+            LogoPos(x, y + 3, @"      |  __  |/ _` | '_ \ / _` | |\/| |/ _` | '_ \       ");
+            LogoPos(x, y + 4, @"      | |  | | (_| | | | | (_| | |  | | (_| | | | |      ");
+            LogoPos(x, y + 5, @"      |_|  |_|\__,_|_| |_|\__, |_|  |_|\__,_|_| |_|      ");
+            LogoPos(x, y + 6, @"                           __/ |                         ");
+            LogoPos(x, y + 7, @"                           |___/                         ");
 
         }
-
-
-        public static void Pos(int x, int y, string tekst) //positioning text
+        public static void LogoPos(int x, int y, string tekst, ConsoleColor color = ConsoleColor.DarkRed) //positioning text
         {
+            Console.ForegroundColor = color;
             Console.SetCursorPosition(x, y);
             Console.Write(tekst);
         }
+
+        public static void Pos(int x, int y, string tekst, ConsoleColor color = ConsoleColor.DarkMagenta) //positioning text
+        {
+            Console.ForegroundColor = color;
+            Console.SetCursorPosition(x, y);
+            Console.Write(tekst);
+            Console.ResetColor();
+        }
         public static void Frames() //Frames araound Logo and textfield
         {
-
-
             //1. horizontal line
             for (int i = 0; i < 67; i++)
             {
