@@ -43,7 +43,9 @@ namespace KMHangMan
             string userWord = new string('-', GetLineLength);
             //write the secret word
             string theWordInLines = "This is the word obscured: \n\n";
+            Console.ForegroundColor = ConsoleColor.White;
             Graphics.Pos(((Console.WindowWidth) - userWord.Length) / 2, 18, userWord);
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Graphics.Pos(((Console.WindowWidth) - theWordInLines.Length) / 2, 16, theWordInLines);
             ConvertWordToArray(secretWordPicked, userWord);
         }
@@ -90,6 +92,7 @@ namespace KMHangMan
                     guessWrongNumber++;
 
                 }
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.SetCursorPosition(((Console.WindowWidth) - userWordInChar.Length) / 2, 18);
                 foreach (char s in userWordInChar)
                 {
@@ -99,6 +102,7 @@ namespace KMHangMan
                 {
                     IsWordGuessed = true;
                 }
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 IsWordFound(wordInChar, userWordInChar);
             }
         }
