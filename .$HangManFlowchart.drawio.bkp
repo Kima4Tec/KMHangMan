@@ -1,0 +1,104 @@
+<mxfile host="app.diagrams.net" modified="2023-11-16T08:24:23.920Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="S4rY4T5yAVv4uCxWvjRA" version="22.1.2" type="device">
+  <diagram name="Side-1" id="D67fDdSKkp3F1Dts5mDe">
+    <mxGraphModel dx="1434" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Y0DjYusV3i2xbhWDqkis-1" value="Start med intro-tekst" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="129" y="70" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="187" y="310" as="targetPoint" />
+            <mxPoint x="187" y="260" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-1" value="Et tilfældigt ord hentes fra array" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="129" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=-0.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="187" y="150" as="sourcePoint" />
+            <mxPoint x="187" y="194" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="187" y="420" as="targetPoint" />
+            <mxPoint x="187" y="370" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-4" value="Ordet vises som underscores og mellemrum" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="129" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="187" y="550" as="targetPoint" />
+            <mxPoint x="187" y="500" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-7" value="Bruger indtaster bogstaver" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="129" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fFVhfhlXH5NjH_UO-ndJ-8" target="fFVhfhlXH5NjH_UO-ndJ-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-8" value="Findes bogstavet i ordet?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="82" y="560" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="599" as="sourcePoint" />
+            <mxPoint x="380" y="599" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="fFVhfhlXH5NjH_UO-ndJ-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="185" y="746" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="fFVhfhlXH5NjH_UO-ndJ-14" target="fFVhfhlXH5NjH_UO-ndJ-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="731" />
+              <mxPoint x="310" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-14" value="Er ordet gættet?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="102" y="691" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-17" value="Nej" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="566" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-18" value="Ja" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="189" y="646" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-19" value="Ja" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="776" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-24" value="Har bruger flere forsøg?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="560" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-27" value="Ja" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="500" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-29" value="Vindermeddelelse" style="rounded=1;whiteSpace=wrap;html=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="122.5" y="820" width="125" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-34" value="Tabermeddelelse" style="rounded=1;whiteSpace=wrap;html=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="640" y="566" width="125" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-35" value="Nej" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="570" y="560" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.378;entryY=1.04;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fFVhfhlXH5NjH_UO-ndJ-24" target="fFVhfhlXH5NjH_UO-ndJ-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fFVhfhlXH5NjH_UO-ndJ-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.925;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fFVhfhlXH5NjH_UO-ndJ-24" target="fFVhfhlXH5NjH_UO-ndJ-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

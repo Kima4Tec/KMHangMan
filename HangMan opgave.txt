@@ -1,0 +1,41 @@
+HangMan opgave
+
+Lav et array af ord.
+
+Udvælg et tilfældigt ord.
+
+Hint: new Random.Next(lengthOfArray)
+
+Vis ordet som underscores. F.eks. _ _ _ (bil)
+
+Hint: Length af string
+
+Man går i gang med at gætte bogstaver.
+
+Hint: console.ReadKey()
+
+Hvis bogstavet er i ordet, skal det vises. f.eks. hvis man gætter i : _ i _
+
+Hint: Contains.
+
+Hvis man gætter forkert mister man et liv.
+
+Hvis man har mistet alle sine liv, har man tabt.
+
+Hvis man gætter ordet inden, vinder man.
+
+ 
+
+Der skal være minimum 4 metoder, hvoraf mindst en skal have en returtype, og en skal have parametre.
+
+ 
+
+Inden kodning skal der laves et UML Flowchart, som beskriver programmet.
+
+
+
+lav array med ord
+
+metode, der tilfældigt kan udvælge et ord
+
+metode, der udskriver ordets længde + mellemrum 
