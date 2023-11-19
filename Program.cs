@@ -3,6 +3,7 @@ using System.ComponentModel.Design;
 using System.Drawing;
 using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography.X509Certificates;
+using System.Text.Json;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -10,6 +11,7 @@ namespace KMHangMan
 {
     internal class Program
     {
+        public static string jsonFilePath = "secretWords.json";
         public static int wrongGuessNumber;
         public static string usedLetters = "";
         public static string secretWord = "";
@@ -23,6 +25,7 @@ namespace KMHangMan
 
         static void Setup()
         {
+            string[] loadedWordsArray = LoadArrayFromJsonFile(jsonFilePath);
             Console.Clear();
             FixedData.Logo(((Console.WindowWidth) - 57) / 2, 2);
             FixedData.Frames();
@@ -31,21 +34,32 @@ namespace KMHangMan
             FixedData.DrawGallow(29, 16);
             FixedData.DrawTree(79, 16);
             FixedData.PrintKeyText(20);
-
-
-            ProcessWord();
+            ProcessWord(loadedWordsArray);
         }
 
-        static void ProcessWord()
+        static string[] LoadArrayFromJsonFile(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                string jsonString = File.ReadAllText(filePath);
+                return JsonSerializer.Deserialize<string[]>(jsonString);
+            }
+            else
+            {
+                return Array.Empty<string>();
+            }
+        }
+
+        static void ProcessWord(string[] loadedWordsArray)
         {
             //random instance
             Random rnd = new();
 
             //get a random number which is in the scope of the array pickWord
-            int number = rnd.Next(1, FixedData.secretWordsArray.Length);
+            int number = rnd.Next(1, loadedWordsArray.Length);
 
             //create a varible containing the secret word
-            secretWord = FixedData.secretWordsArray[number];
+            secretWord = loadedWordsArray[number];
 
             //find the length of the secret word picked
             int GetLineLength = secretWord.Length;
@@ -212,7 +226,7 @@ namespace KMHangMan
                     usedLetters = "";
                     FixedData.PrintUsedLetter(23);
                     FixedData.EraseoldText();
-                    ProcessWord();
+                    Setup();
                     validKeyPress = true;
                 }
                 if (x.Key == ConsoleKey.N)

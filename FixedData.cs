@@ -8,7 +8,6 @@ namespace KMHangMan
 {
     internal class FixedData
     {
-        public static string[] secretWordsArray = { "mclaren", "porsche", "lamborghini", "tuatara", "mercedes", "ferrari", "bentley", "zenvo", "koenigsegg", "bugatti", "jaguar" };
         public static void IntroText(int y) 
         {
             string gameInfo1 = @"HangMan is a game in which one player tries to guess ";
