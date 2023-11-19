@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 using System.Drawing;
 using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography.X509Certificates;
@@ -67,8 +68,9 @@ namespace KMHangMan
                 Console.SetCursorPosition(68, 20);
                 char inputKey = Console.ReadKey(intercept: true).KeyChar;
                 char userInputKey = char.ToLower(inputKey);
-                IsKeyValid(userInputKey);
-
+                if (IsKeyValid(userInputKey))
+                {
+                    FixedData.EraseoldText();
                 if (IsKeyInWord(userInputKey, secretWordChar, obscuredWordChar))
                 {
                     KeyUsed(userInputKey);
@@ -78,6 +80,7 @@ namespace KMHangMan
                     KeyUsed(userInputKey);
                     wrongGuessNumber++;
                     DrawHangMan();
+                }
                 }
                 
             }
@@ -93,19 +96,15 @@ namespace KMHangMan
 
         }
 
-        static char IsKeyValid(char userInputKey)
+        static bool IsKeyValid(char userInputKey)
         {
-            while (true) {
-                if (!char.IsLetter(userInputKey) && usedLetters.Contains(userInputKey))
-                {
-                    string wrongKeys = "That is not a valid letter.";
-                    Graphics.Pos(((Console.WindowWidth) - wrongKeys.Length) / 2, 23, wrongKeys, ConsoleColor.Cyan);
-                    
-                }
-                else 
-                    return userInputKey;
- 
+            if (!char.IsLetter(userInputKey) || usedLetters.Contains(userInputKey))
+            {
+                string wrongKeys = "That is not a valid letter.";
+                Graphics.Pos(((Console.WindowWidth) - wrongKeys.Length) / 2, 23, wrongKeys, ConsoleColor.Cyan);
+                return false;
             }
+                return true; 
         }
 
         static bool IsKeyInWord(char userInputKey, char[] secretWordChar, char[] obscuredWordChar)
