@@ -42,7 +42,7 @@ namespace KMHangMan
         /// Loading data from json file
         /// </summary>
         /// <param name="filePath"></param>
-        /// <returns></returns>
+        /// <returns>Return an array of names on cars from JSON file: secretWords.json if file exists</returns>
         static string[] LoadArrayFromJsonFile(string filePath)
         {
             if (File.Exists(filePath))
